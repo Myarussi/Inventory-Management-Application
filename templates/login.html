@@ -1,0 +1,37 @@
+{% extends 'login_base.html' %}
+
+{% block head %}
+<title>Inventory Login</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="form-container">
+         <img src="{{ url_for('static', filename = 'Avatar.png')}}" alt="Avatar">
+              <form action = "" method="post">
+                 <div class="username">
+                    <section class = "input-box"> 
+                        <input class = "input-box" type="text" name = "username" value = "" placeholder = "Username"><br />  
+                    </section>
+                    <section class = "input-box">
+                        <input class = "input-box" type="password" name = "password" value = "" placeholder = "Password"><br />  
+                    </section>
+                </div>
+
+                <div class="login">
+                    <section class = "submit">
+                        <input class = "button" type="submit" name = "Login" value = "Login"><br />
+                    </section>
+                </div>
+
+                    <a href="forgot">Forget Password?</a> 
+                    <a href="create">Create Account</a>
+                     
+                
+             </form>
+    </div>
+</div>
+{% endblock %}
+
+
+

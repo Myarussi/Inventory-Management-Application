@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Expiring Lots</title>
+
+{% endblock %}
+
+<body>
+    
+    {% block body %}
+
+    <div class="middle">
+        <table class="table">
+            <tr class="table__header">
+                {% for expLotheader in expLotheadings %}
+                <th class="table__cell"> {{expLotheader}} </th>
+                {% endfor %}
+            </tr>
+            {% for k, v in dict_inventory.items() %}
+            <tr class="table__row">
+                <td class = "table__row">{{ dict_inventory[k]['Name'] }}</td>
+                <td class = "table__row">{{ dict_inventory[k]['Lot Number'] }}</td>
+                <td class = "table__row">{{ dict_inventory[k]['Lot Expiration'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+    {% endblock %}
+
+</body>
